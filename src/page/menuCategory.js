@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Heart } from 'phosphor-react'; // Import Phosphor icons
 import React, { useEffect, useState } from 'react';
 
-const CategoryDetail = () => {
+const MenuCategory = () => {
   const [meals, setMeals] = useState([]);
   const [loading, setLoading] = useState(true);
   const [favorites, setFavorites] = useState([]);
@@ -83,4 +83,4 @@ const CategoryDetail = () => {
   );
 };
 
-export default CategoryDetail;
+export default MenuCategory;

@@ -6,7 +6,6 @@ import HomeHeroImage from '../assets/home-hero.png';
 import Header from "../component/Header";
 
 const Home = () => {
-    // Define menu items as an array of objects
     const menuItems = [
         { text: "Menu", icon: <Hamburger size={24} />, gradient: 'linear-gradient(180deg, hsl(60deg 72% 85%) 0%, hsl(57deg 90% 72%) 44%, hsl(55deg 100% 52%) 100%)' },
         { text: "Favorite", icon: <Heart size={24} />, gradient: 'linear-gradient(180deg, hsl(200deg 72% 85%) 0%, hsl(197deg 90% 72%) 44%, hsl(195deg 100% 52%) 100%)' },
@@ -14,9 +13,8 @@ const Home = () => {
     ];
 
     return (
-        <Box bgcolor={'#13131D'} minHeight={'100vh'}>
+        <Box>
             <Header />
-
             <Container>
                 <Stack direction={'row'} alignItems={'center'}>
                     <Box>

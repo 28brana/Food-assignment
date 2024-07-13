@@ -1,23 +1,24 @@
-import { CssBaseline, Menu, ThemeProvider } from '@mui/material';
+import { Box, CssBaseline, ThemeProvider } from '@mui/material';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
-import CategoryDetail from './page/categoryDetail';
 import Home from './page/home';
+import MenuPage from './page/menu';
+import MenuCategory from './page/menuCategory';
 import theme from './theme/theme';
 
 function App() {
   return (
-    <div className="App" style={{ minHeight: '100vh' }}>
+    <Box className="App" bgcolor={'#13131D'} minHeight={'100vh'}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <Router>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/menu" element={<Menu />} />
-            <Route path="/menu/:id" element={<CategoryDetail />} />
+            <Route path="/menu" element={<MenuPage />} />
+            <Route path="/menu/:id" element={<MenuCategory />} />
           </Routes>
         </Router>
       </ThemeProvider>
-    </div>
+    </Box>
   );
 }
 
