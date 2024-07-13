@@ -6,6 +6,7 @@ import { useParams } from "react-router-dom";
 import Header from "../component/Header";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleFavorite } from "../redux/reducers/mainReducer";
+import NoDataFound from "../component/NotFound";
 
 const MenuCategory = () => {
   let { id } = useParams();
@@ -62,11 +63,7 @@ const MenuCategory = () => {
               </Grid>
             ))
           ) : error || meals.length === 0 ? (
-            <Stack alignItems="center" width="100%">
-              <Typography variant="body1" color="error" mt={2}>
-                {error || 'No Data Found'}
-              </Typography>
-            </Stack>
+            <NoDataFound />
           ) : (
             meals.map((meal) => (
               <Grid item key={meal.idMeal} xs={12} sm={6} md={4}>
