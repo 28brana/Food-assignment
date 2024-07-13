@@ -1,5 +1,5 @@
+import { Button, Card, CardContent, CardMedia, Collapse, Typography } from '@mui/material';
 import React from 'react';
-import { Button, Card, CardActions, CardContent, CardMedia, Collapse, Typography } from '@mui/material';
 import { Link } from 'react-router-dom';
 
 const CategoryCard = ({ category, expanded, onExpandClick }) => {
