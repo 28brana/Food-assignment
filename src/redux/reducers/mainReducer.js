@@ -7,12 +7,13 @@ const favoritesSlice = createSlice({
   },
   reducers: {
     toggleFavorite: (state, action) => {
-      const mealId = action.payload;
-      const index = state.favorites.indexOf(mealId);
+      const meal = action.payload;
+      const index = state.favorites.findIndex(item => item.idMeal === meal.idMeal);
+
       if (index !== -1) {
-        state.favorites = state.favorites.filter(id => id !== mealId);
+        state.favorites = state.favorites.filter(item => item.idMeal !== meal.idMeal);
       } else {
-        state.favorites.push(mealId);
+        state.favorites.push(meal);
       }
     },
   },
