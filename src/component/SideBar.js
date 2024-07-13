@@ -1,5 +1,5 @@
 import { Drawer, IconButton, List, ListItemButton, ListItemIcon, ListItemText } from '@mui/material';
-import { DiceThree, Heart, HouseSimple, List as ListIcon, User } from 'phosphor-react';
+import { DiceThree, Hamburger, Heart, HouseSimple, List as ListIcon, User } from 'phosphor-react';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -21,12 +21,12 @@ const SideNavBar = () => {
     return (
         <div>
             <IconButton onClick={toggleDrawer}>
-                <ListIcon size={24} />
+                <Hamburger color='white' size={28} />
             </IconButton>
-            <Drawer anchor="left" open={open} onClose={toggleDrawer}>
+            <Drawer anchor="right" open={open} onClose={toggleDrawer} >
                 <List>
                     {menuItems.map((item, index) => (
-                        <ListItemButton  components={Link} to={item.path} onClick={toggleDrawer}>
+                        <ListItemButton key={index}  components={Link} to={item.path} onClick={toggleDrawer}>
                             <ListItemIcon>{item.icon}</ListItemIcon>
                             <ListItemText primary={item.text} />
                         </ListItemButton>
