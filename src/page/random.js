@@ -1,4 +1,3 @@
-// RandomMeal.js
 import { Button, Card, CardContent, CardMedia, Collapse, Container, Stack, Typography } from "@mui/material";
 import axios from "axios";
 import React, { useState } from "react";
@@ -69,8 +68,8 @@ const RandomMeal = () => {
                             </CardContent>
                         </Card>
                     ) : (
-                        <Typography variant="body1" color="error">
-                            No meal found. Please generate a random meal.
+                        <Typography variant="body1" color="white">
+                            Please generate a random meal.
                         </Typography>
                     )}
                 </Stack>
