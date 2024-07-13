@@ -1,12 +1,12 @@
-import { Card, CardContent, CardMedia, Container, Grid, IconButton, Skeleton, Stack, Typography } from "@mui/material";
+import { Card, CardContent, CardMedia, Container, Grid, IconButton, Skeleton, Typography } from "@mui/material";
 import axios from "axios";
 import { Heart } from "phosphor-react";
 import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import Header from "../component/Header";
-import { useDispatch, useSelector } from "react-redux";
-import { toggleFavorite } from "../redux/reducers/mainReducer";
 import NoDataFound from "../component/NotFound";
+import { toggleFavorite } from "../redux/reducers/mainReducer";
 
 const MenuCategory = () => {
   let { id } = useParams();

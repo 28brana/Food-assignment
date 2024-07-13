@@ -1,7 +1,7 @@
 // RandomMeal.js
-import React, { useState } from "react";
-import { Button, Card, CardContent, CardMedia, Container, Typography, Collapse, Box, Stack } from "@mui/material";
+import { Button, Card, CardContent, CardMedia, Collapse, Container, Stack, Typography } from "@mui/material";
 import axios from "axios";
+import React, { useState } from "react";
 import Header from "../component/Header";
 
 const RandomMeal = () => {

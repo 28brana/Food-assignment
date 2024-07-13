@@ -1,10 +1,10 @@
-import React from "react";
-import { useSelector, useDispatch } from "react-redux";
 import { Card, CardContent, CardMedia, Container, Grid, IconButton, Typography } from "@mui/material";
 import { Heart } from "phosphor-react";
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
 import Header from "../component/Header";
-import { toggleFavorite } from "../redux/reducers/mainReducer";
 import NoDataFound from "../component/NotFound";
+import { toggleFavorite } from "../redux/reducers/mainReducer";
 
 const Favorite = () => {
     const dispatch = useDispatch();
